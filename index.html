@@ -4,138 +4,273 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="author" content="Dr Abdulla">
-  <meta name="generator" content="Jekyll v4.4.1">
-  <meta name="description" content="Official webpage of Dr Abdulla, Assistant Professor at Jamia Millia Islamia, New Delhi. Research interests include agricultural economics, development economics, climate resilience, and more.">
+  <meta name="description" content="Official webpage of Dr Abdulla, Assistant Professor at Jamia Millia Islamia, New Delhi. Specializing in agricultural economics, development economics, and climate resilience.">
   <title>Dr Abdulla | Assistant Professor, Jamia Millia Islamia</title>
   <link rel="canonical" href="/">
-  <link rel="stylesheet" href="/assets/css/frame.css">
   <link rel="alternate" href="/feed.xml" type="application/atom+xml" title="Dr Abdulla">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Lora:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
   <style>
-    body {
-      background-color: #d4edda;
-      font-family: 'Bell MT', 'Georgia', serif;
-      margin: 40px;
+    * {
+      margin: 0;
       padding: 0;
+      box-sizing: border-box;
+    }
+    :root {
+      --primary-color: #1e3a8a;
+      --secondary-color: #3b82f6;
+      --bg-light: #f9fafb;
+      --bg-dark: #1f2937;
+      --text-light: #1f2937;
+      --text-dark: #f9fafb;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg-light);
+      color: var(--text-light);
+      line-height: 1.7;
+      scroll-behavior: smooth;
+      transition: background-color 0.3s, color 0.3s;
+    }
+    body.dark-mode {
+      background-color: var(--bg-dark);
+      color: var(--text-dark);
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
     }
     header {
-      background-color: #333;
-      padding: 20px;
-      color: #fff;
+      background-color: var(--primary-color);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      padding: 1rem 0;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    header .container {
       display: flex;
       justify-content: space-between;
       align-items: center;
     }
     header .title {
-      font-size: 24px;
-      font-weight: bold;
+      font-family: 'Lora', serif;
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--text-dark);
       text-decoration: none;
-      color: #fff;
+      transition: color 0.3s ease;
+    }
+    header .title:hover {
+      color: var(--secondary-color);
+    }
+    header nav {
+      display: flex;
+      align-items: center;
     }
     header nav a {
-      font-weight: bold;
-      border: 2px solid #fff;
-      margin-left: 10px;
-      padding: 5px 10px;
-      border-radius: 4px;
+      color: var(--text-dark);
       text-decoration: none;
-      color: #fff;
+      font-weight: 500;
+      margin-left: 1.5rem;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      transition: background-color 0.3s ease, color 0.3s ease;
     }
     header nav a:hover {
-      background-color: #555;
+      background-color: var(--secondary-color);
+      color: var(--text-dark);
+    }
+    #theme-toggle {
+      background: none;
+      border: none;
+      color: var(--text-dark);
+      font-size: 1.2rem;
+      cursor: pointer;
+      margin-left: 1.5rem;
     }
     .intro-section {
-      padding: 20px;
-      display: flex;
-      justify-content: space-between;
+      position: relative;
+      background: linear-gradient(to bottom, #e2e8f0, var(--bg-light));
+      padding: 4rem 0;
+      margin-bottom: 2rem;
+      overflow: hidden;
+    }
+    .intro-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('ph.jpg') no-repeat center/cover;
+      opacity: 0.1;
+      z-index: -1;
+    }
+    .intro-section .container {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 2rem;
       align-items: center;
     }
     .welcome-message {
+      font-family: 'Lora', serif;
+      font-size: 2.2rem;
+      font-weight: 500;
+      color: var(--primary-color);
       font-style: italic;
-      font-size: 28px;
-      color: #2c3e50;
-      font-family: 'Bell MT', 'Georgia', serif;
-      width: 60%;
-    }
-    .photo {
-      width: 35%;
-      text-align: right;
     }
     .photo img {
-      width: 180px;
-      height: auto;
+      width: 220px;
+      height: 220px;
       border-radius: 50%;
-      border: 3px solid #2c3e50;
+      border: 5px solid var(--secondary-color);
+      object-fit: cover;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+    article {
+      background-color: var(--bg-light);
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      margin-bottom: 3rem;
+    }
+    body.dark-mode article {
+      background-color: #374151;
+    }
+    article h2 {
+      font-family: 'Lora', serif;
+      font-size: 2.2rem;
+      color: var(--primary-color);
+      margin-bottom: 1rem;
+      border-bottom: 3px solid var(--secondary-color);
+      padding-bottom: 0.5rem;
     }
     article p {
+      font-size: 1.1rem;
+      margin-bottom: 1.2rem;
       text-align: justify;
-      font-size: 18px;
+    }
+    article a {
+      color: var(--secondary-color);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+    article a:hover {
+      color: #2563eb;
+      text-decoration: underline;
     }
     footer {
-      background-color: #222;
-      color: #fff;
+      background-color: var(--primary-color);
+      color: var(--text-dark);
+      padding: 2rem 0;
       text-align: center;
-      padding: 20px 10px;
-      margin-top: 40px;
     }
     footer div {
-      margin-bottom: 10px;
-      font-weight: bold;
+      font-family: 'Lora', serif;
+      font-size: 1.2rem;
+      font-weight: 500;
+      margin-bottom: 1rem;
     }
     footer nav a {
-      margin: 0 10px;
-      color: #fff;
+      margin: 0 1rem;
+      color: var(--text-dark);
+      text-decoration: none;
+      transition: color 0.3s ease;
     }
     footer nav i {
-      font-size: 20px;
-      color: #fff;
+      font-size: 1.8rem;
+    }
+    footer nav a:hover i {
+      color: var(--secondary-color);
+    }
+    @media (max-width: 768px) {
+      header .container {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      header nav {
+        margin-top: 1rem;
+        flex-wrap: wrap;
+      }
+      header nav a {
+        margin: 0.5rem;
+      }
+      .intro-section .container {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+      .photo {
+        margin-top: 1.5rem;
+      }
+      .welcome-message {
+        font-size: 1.8rem;
+      }
     }
   </style>
 </head>
 
 <body>
+  <header>
+    <div class="container">
+      <a href="/" class="title">Dr Abdulla</a>
+      <nav>
+        <a href="/CV.pdf" target="_blank" aria-label="Download CV">CV</a>
+        <a href="/latest/" aria-label="View Articles">Articles</a>
+        <a href="/wp/" aria-label="View Working Papers">Working Papers</a>
+        <a href="/more/" aria-label="Explore Research Resources">Research Resources</a>
+        <button id="theme-toggle" aria-label="Toggle dark mode">
+          <i class="fas fa-moon"></i>
+        </button>
+      </nav>
+    </div>
+  </header>
 
-<header>
-  <a href="/" class="title">Dr Abdulla</a>
-  <nav>
-    <a href="/CV.pdf" target="_blank">CV</a>
-    <a href="/latest/">Articles</a>
-    <a href="/wp/">Working Papers</a>
-    <a href="/more/">Research Resources</a>
-  </nav>
-</header>
+  <section class="intro-section">
+    <div class="container">
+      <div class="welcome-message">
+        <p>Thanks for visiting my Homepage!</p>
+      </div>
+      <div class="photo">
+        <img src="ph.jpg" alt="Portrait of Dr Abdulla">
+      </div>
+    </div>
+  </section>
 
-<section class="intro-section">
-  <div class="welcome-message">
-    <p>Thanks for visiting my Homepage!</p>
-  </div>
-  <div class="photo">
-    <img src="ph.jpg" alt="Dr Abdulla">
-  </div>
-</section>
+  <article>
+    <h2 id="bio">Biography</h2>
+    <p>I am an Assistant Professor at <a href="https://jmi.ac.in/" target="_blank" rel="noopener">Jamia Millia Islamia, a Central University</a>, New Delhi, India. Prior to joining JMI, I worked as a Research Associate at the <a href="https://niap.icar.gov.in/" target="_blank" rel="noopener">ICAR-National Institute of Agricultural Economics and Policy Research</a>, New Delhi, India.</p>
 
-<article>
-  <h2 id="bio">Biography</h2>
-  <p>I am an Assistant Professor at <a href="https://jmi.ac.in/">Jamia Millia Islamia, a Central University</a>, New Delhi, India. Prior to joining JMI, I worked as a Research Associate at the <a href="https://niap.icar.gov.in/">ICAR-National Institute of Agricultural Economics and Policy Research</a>, New Delhi, India.</p>
+    <p>I have also worked as a Research Associate at the <a href="https://naas.org.in/" target="_blank" rel="noopener">National Academy of Agricultural Sciences (NAAS)</a>, and as a Young Professional at the <a href="https://www.commerce.gov.in/" target="_blank" rel="noopener">Department of Commerce, Ministry of Commerce and Industry</a>, Government of India, New Delhi.</p>
 
-  <p>I have also worked as a Research Associate at the <a href="https://naas.org.in/">National Academy of Agricultural Sciences (NAAS)</a>, and as a Young Professional at the <a href="https://www.commerce.gov.in/">Department of Commerce, Ministry of Commerce and Industry</a>, Government of India, New Delhi.</p>
+    <p>I hold M.Phil. and Ph.D. degrees in Economics from <a href="https://www.amu.ac.in/" target="_blank" rel="noopener">Aligarh Muslim University</a>, Aligarh. My Ph.D. dissertation was titled “Performance of Sugar Mills in India: A Comparative Study of Maharashtra and Uttar Pradesh”, and my M.Phil. dissertation focused on “Efficiency of Sugar Mills in Uttar Pradesh: An Analysis”. I earned my M.A. and B.A. (Hons) in Economics along with Mathematics and Statistics from the same university.</p>
 
-  <p>I hold M.Phil. and Ph.D. degrees in Economics from <a href="https://www.amu.ac.in/">Aligarh Muslim University</a>, Aligarh. My Ph.D. dissertation was titled “Performance of Sugar Mills in India: A Comparative Study of Maharashtra and Uttar Pradesh”, and my M.Phil. dissertation focused on “Efficiency of Sugar Mills in Uttar Pradesh: An Analysis”. I earned my M.A. and B.A. (Hons) in Economics along with Mathematics and Statistics from the same university.</p>
+    <p>My research interests include poverty and inequality, trade, banking, climate change and resilience, development economics, environmental and agricultural economics, marketing and value chains, sustainable agrifood systems, organic farming, water management, and agricultural policy evaluation.</p>
+  </article>
 
-  <p>My research interests include poverty and inequality, trade, banking, climate change and resilience, development economics, environmental and agricultural economics, marketing and value chains, sustainable agrifood systems, organic farming, water management, and agricultural policy evaluation.</p>
-</article>
+  <footer>
+    <div>Agricultural Economics / Economics</div>
+    <nav>
+      <a href="mailto:abdullahalig007@gmail.com" title="Email Dr Abdulla" aria-label="Email Dr Abdulla"><i class="fas fa-envelope"></i></a>
+      <a href="https://x.com/abdullahalig07" target="_blank" rel="noopener" title="Twitter" aria-label="Dr Abdulla's Twitter"><i class="fab fa-x-twitter"></i></a>
+      <a href="https://www.researchgate.net/profile/Dr-Abdulla?ev=hdr_xprf" target="_blank" rel="noopener" title="ResearchGate" aria-label="Dr Abdulla's ResearchGate"><i class="fab fa-researchgate"></i></a>
+      <a href="https://www.linkedin.com/in/dr-abdulla-00793160/" target="_blank" rel="noopener" title="LinkedIn" aria-label="Dr Abdulla's LinkedIn"><i class="fab fa-linkedin"></i></a>
+      <a href="https://orcid.org/0000-0002-6544-1056" target="_blank" rel="noopener" title="ORCID" aria-label="Dr Abdulla's ORCID"><i class="fab fa-orcid"></i></a>
+      <a href="https://scholar.google.com/citations?user=6CE-0s8AAAAJ" target="_blank" rel="noopener" title="Google Scholar" aria-label="Dr Abdulla's Google Scholar"><i class="fas fa-graduation-cap"></i></a>
+    </nav>
+  </footer>
 
-<footer>
-  <div>Agricultural Economics / Economics</div>
-  <nav>
-    <a href="mailto:abdullahalig007@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
-    <a href="https://x.com/abdullahalig07" title="Twitter"><i class="fab fa-x-twitter"></i></a>
-    <a href="https://www.researchgate.net/profile/Dr-Abdulla?ev=hdr_xprf" title="ResearchGate"><i class="fab fa-researchgate"></i></a>
-    <a href="https://www.linkedin.com/in/dr-abdulla-00793160/" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-    <a href="https://orcid.org/0000-0002-6544-1056" title="ORCID"><i class="fab fa-orcid"></i></a>
-    <a href="https://scholar.google.com/citations?user=6CE-0s8AAAAJ" title="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
-  </nav>
-</footer>
-
+  <script>
+    // Dark mode toggle
+    const toggleButton = document.getElementById('theme-toggle');
+    toggleButton.addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
+      const icon = toggleButton.querySelector('i');
+      icon.classList.toggle('fa-moon');
+      icon.classList.toggle('fa-sun');
+    });
+  </script>
 </body>
 </html>
