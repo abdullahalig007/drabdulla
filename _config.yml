@@ -1,2 +1,5 @@
 title: Dr Abdulla
 theme: minima
+include:
+  - CV.pdf
+  - ph.jpg
