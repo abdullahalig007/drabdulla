@@ -1,5 +1,6 @@
 title: Dr Abdulla
 theme: minima
+baseurl: "/drabdulla"
 include:
   - CV.pdf
   - ph.jpg
