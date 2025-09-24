@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Dr Abdulla">
+  <meta name="description" content="Working papers by Dr Abdulla, Assistant Professor at Jamia Millia Islamia.">
+  <title>Working Papers | Dr Abdulla</title>
+  <link rel="canonical" href="/wp/">
+  <h1>Working Papers</h1>
+  <p>Coming soon! This section will showcase my working papers on topics like climate resilience and sustainable agrifood systems.</p>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Lora:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    :root {
+      --primary-color: #1e3a8a;
+      --secondary-color: #3b82f6;
+      --bg-light: #f9fafb;
+      --bg-dark: #1f2937;
+      --text-light: #1f2937;
+      --text-dark: #f9fafb;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg-light);
+      color: var(--text-light);
+      line-height: 1.7;
+      scroll-behavior: smooth;
+      transition: background-color 0.3s, color 0.3s;
+    }
+    body.dark-mode {
+      background-color: var(--bg-dark);
+      color: var(--text-dark);
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+    header {
+      background-color: var(--primary-color);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      padding: 1rem 0;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    header .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    header .title {
+      font-family: 'Lora', serif;
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--text-dark);
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    header .title:hover {
+      color: var(--secondary-color);
+    }
+    header nav {
+      display: flex;
+      align-items: center;
+    }
+    header nav a {
+      color: var(--text-dark);
+      text-decoration: none;
+      font-weight: 500;
+      margin-left: 1.5rem;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+    header nav a:hover {
+      background-color: var(--secondary-color);
+      color: var(--text-dark);
+    }
+    #theme-toggle {
+      background: none;
+      border: none;
+      color: var(--text-dark);
+      font-size: 1.2rem;
+      cursor: pointer;
+      margin-left: 1.5rem;
+    }
+    article {
+      background-color: var(--bg-light);
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      margin: 2rem auto;
+    }
+    body.dark-mode article {
+      background-color: #374151;
+    }
+    article h1 {
+      font-family: 'Lora', serif;
+      font-size: 2.2rem;
+      color: var(--primary-color);
+      margin-bottom: 1rem;
+      border-bottom: 3px solid var(--secondary-color);
+      padding-bottom: 0.5rem;
+    }
+    article p {
+      font-size: 1.1rem;
+      margin-bottom: 1.2rem;
+    }
+    footer {
+      background-color: var(--primary-color);
+      color: var(--text-dark);
+      padding: 2rem 0;
+      text-align: center;
+    }
+    footer div {
+      font-family: 'Lora', serif;
+      font-size: 1.2rem;
+      font-weight: 500;
+      margin-bottom: 1rem;
+    }
+    footer nav a {
+      margin: 0 1rem;
+      color: var(--text-dark);
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    footer nav i {
+      font-size: 1.8rem;
+    }
+    footer nav a:hover i {
+      color: var(--secondary-color);
+    }
+    @media (max-width: 768px) {
+      header .container {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      header nav {
+        margin-top: 1rem;
+        flex-wrap: wrap;
+      }
+      header nav a {
+        margin: 0.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <a href="/" class="title">Dr Abdulla</a>
+      <nav>
+        <a href="/CV.pdf" target="_blank" rel="noopener" aria-label="Download CV">CV</a>
+        <a href="/latest/" aria-label="View Articles">Articles</a>
+        <a href="/wp/" aria-label="View Working Papers">Working Papers</a>
+        <a href="/more/" aria-label="Explore Research Resources">Research Resources</a>
+        <button id="theme-toggle" aria-label="Toggle dark mode">
+          <i class="fas fa-moon"></i>
+        </button>
+      </nav>
+    </div>
+  </header>
+  <article>
+    <div class="container">
+      <h1>Articles</h1>
+      <p>Coming soon! This section will feature my published articles on agricultural economics, development economics, and more.</p>
+    </div>
+  </article>
+  <footer>
+    <div>Agricultural Economics / Economics</div>
+    <nav>
+      <a href="mailto:abdullahalig007@gmail.com" title="Email Dr Abdulla" aria-label="Email Dr Abdulla"><i class="fas fa-envelope"></i></a>
+      <a href="https://x.com/abdullahalig07" target="_blank" rel="noopener" title="Twitter" aria-label="Dr Abdulla's Twitter"><i class="fab fa-x-twitter"></i></a>
+      <a href="https://www.researchgate.net/profile/Dr-Abdulla?ev=hdr_xprf" target="_blank" rel="noopener" title="ResearchGate" aria-label="Dr Abdulla's ResearchGate"><i class="fab fa-researchgate"></i></a>
+      <a href="https://www.linkedin.com/in/dr-abdulla-00793160/" target="_blank" rel="noopener" title="LinkedIn" aria-label="Dr Abdulla's LinkedIn"><i class="fab fa-linkedin"></i></a>
+      <a href="https://orcid.org/0000-0002-6544-1056" target="_blank" rel="noopener" title="ORCID" aria-label="Dr Abdulla's ORCID"><i class="fab fa-orcid"></i></a>
+      <a href="https://scholar.google.com/citations?user=6CE-0s8AAAAJ" target="_blank" rel="noopener" title="Google Scholar" aria-label="Dr Abdulla's Google Scholar"><i class="fas fa-graduation-cap"></i></a>
+    </nav>
+  </footer>
+  <script>
+    const toggleButton = document.getElementById('theme-toggle');
+    toggleButton.addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
+      const icon = toggleButton.querySelector('i');
+      icon.classList.toggle('fa-moon');
+      icon.classList.toggle('fa-sun');
+    });
+  </script>
+</body>
+</html>
