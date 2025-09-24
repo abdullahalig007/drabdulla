@@ -1,6 +1,6 @@
 title: Dr Abdulla
-theme: minima
 baseurl: "/drabdulla"
+url: "https://abdullahalig007.github.io"
 include:
   - CV.pdf
   - ph.jpg
